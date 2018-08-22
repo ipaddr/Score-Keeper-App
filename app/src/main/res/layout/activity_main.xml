@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/left_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/devider"
+        app:layout_constraintBottom_toTopOf="@id/reset">
+
+        <TextView
+            android:id="@+id/teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="A"
+            android:textSize="64sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/ScoreA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/teamA"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="36dp"
+            android:text="0"
+            android:textSize="56sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/threeA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ScoreA"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="threeA"
+            android:text="three point"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/twoA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/threeA"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="twoA"
+            android:text="two point"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/oneA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/twoA"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="oneA"
+            android:text="one point"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/devider"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="8"
+        app:layout_constraintStart_toEndOf="@id/left_container"
+        app:layout_constraintEnd_toStartOf="@id/right_container"
+        app:layout_constraintBottom_toTopOf="@id/reset"
+        android:background="@color/colorPrimaryDark"/>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="reset"
+        android:text="RESET"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/right_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/devider"
+        app:layout_constraintBottom_toTopOf="@id/reset">
+
+        <TextView
+            android:id="@+id/teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="B"
+            android:textSize="64sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/ScoreB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/teamB"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="36dp"
+            android:text="0"
+            android:textSize="56sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/threeB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ScoreB"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="threeB"
+            android:text="three point"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/twoB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/threeB"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="twoB"
+            android:text="two point"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/oneB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/twoB"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="oneB"
+            android:text="one point"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
